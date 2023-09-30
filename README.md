@@ -5,6 +5,9 @@
 * 可以将board.xcpcio.com的榜同步至vjudge
 * 为什么不用vjudge自带的历史排名功能呢？
   * 因为vjudge会直接使用非现场赛的榜，需要每支队伍自己在settings里打勾，很麻烦
+* 演示
+  * [Bilibili](https://www.bilibili.com/video/BV1Tw411e7Sg)
+
 
 ## 2. 依赖
 
