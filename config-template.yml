@@ -8,11 +8,11 @@ board-link: https://board.xcpcio.com/icpc/48th/online-qualification-2
 
 contest-length-proportional-scaling: True
 
-vjudge-wait-time: 3
+vjudge-wait-time: 10
 
-board-wait-time: 2
+board-wait-time: 10
 
-loop-wait-time: 3
+loop-wait-time: 300
 
 vjudge-account: 
 

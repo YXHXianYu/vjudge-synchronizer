@@ -47,14 +47,14 @@ class VjudgeSynchronizer:
 
     def get_current_time(self):
         self.wd.get(self.vjudge_link)
-        self.wd.implicitly_wait(self.vjudge_wait_time)
+        time.sleep(self.vjudge_wait_time)
         t1 = [int(i) for i in self.wd.find_element(By.ID, "span-elapsed").text.split(':')]
         v1 = t1[0] * 60 * 60 + t1[1] * 60 + t1[2]
         return v1
 
     def get_vjudge_contest_length(self):
         self.wd.get(self.vjudge_link)
-        self.wd.implicitly_wait(self.vjudge_wait_time)
+        time.sleep(self.vjudge_wait_time)
         t1 = [int(i) for i in self.wd.find_element(By.ID, "span-elapsed").text.split(':')]
         v1 = t1[0] * 60 * 60 + t1[1] * 60 + t1[2]
         t2 = [int(i) for i in self.wd.find_element(By.ID, "span-remaining").text.split(':')]
@@ -96,7 +96,9 @@ class VjudgeSynchronizer:
         self.wd.find_element(By.XPATH, '//a[@class="nav-link login"]').click()
         self.wd.find_element(By.XPATH, '//input[@id="login-username"]').send_keys(self.vjudge_account)
         self.wd.find_element(By.XPATH, '//input[@id="login-password"]').send_keys(self.vjudge_password)
+        time.sleep(self.vjudge_wait_time)
         self.wd.find_element(By.XPATH, '//button[@id="btn-login"]').click()
+        time.sleep(self.vjudge_wait_time)
 
         while True:
             try:
